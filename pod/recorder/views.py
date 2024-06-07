@@ -229,7 +229,6 @@ def recorder_notify(request):
                 return HttpResponse("nok: key is not valid")
 
             if recorder.publication_auto is True:
-                print(mediapath)
                 # Ici on a déjà controllé que l'upload est terminé
                 rft = RecordingFileTreatment.objects.get(file=mediapath, recorder=recorder)
                 title = rft.file.split('/')
